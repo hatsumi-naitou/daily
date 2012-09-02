@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">0829</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="show">テスト文を表示してみる</string>
+    <string name="pochi">ポチッと押してみる</string>
+    <string name="testtest">テスト文を表示してみました</string>
+
+</resources>
