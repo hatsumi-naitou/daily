@@ -3,14 +3,12 @@ package com.example.myamera;
 import java.io.FileOutputStream;
 
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.hardware.Camera;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-@SuppressLint({ "ParserError", "ParserError", "ParserError" })
 public class MyCameraView extends SurfaceView 
 	implements SurfaceHolder.Callback, Camera.PictureCallback{
 		private SurfaceHolder holder;
