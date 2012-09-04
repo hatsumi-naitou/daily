@@ -1,11 +1,17 @@
 package com.example.ict;
 
+//import java.util.Random;
+
+import java.util.Random;
+
 import com.example.ict.R;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
- class MainActivity extends Activity {
+
+
+class MainActivity extends Activity {
 
 	@Override
     public void onCreate(Bundle savedInstanceState) {
@@ -13,59 +19,41 @@ import android.widget.ImageView;
         setContentView(R.layout.activity_main);
     }
     
-    //[画像を表示する]ボタンクリック
+    //おみくじ画像をクリック
+	
     
-    public void showImage(View view){
+    public void showKuji(View view){
     	ImageView imageView1 = (ImageView)findViewById(R.id.imageView4);
+    	    	
+    	int kj = 0;    	
+    	Random rnd = new Random();
     	
-    	//String abc = null;
-    	int rnd;
-    	rnd = (int)Math.random()*10;
-    	
- 	   switch(rnd){
+    	//switch((int)Math.random() % 5)
+    	switch((int)rnd.nextInt(5)) {
  	   case 0:
-		   //abc="R.drawable.kuji3";
-		   imageView1.setImageResource(R.drawable.kuji1);
+ 		   kj = R.drawable.kuji1;
 		   break;
  	   case 1:
- 		   //abc="R.drawable.kuji1";
- 		   imageView1.setImageResource(R.drawable.kuji1);
+ 		   kj = R.drawable.kuji2;
  		   break;
  	   case 2:
- 		   //abc="R.drawable.kuji2";
- 		   imageView1.setImageResource(R.drawable.kuji2);
+ 		   kj = R.drawable.kuji2;
  		   break;
  	   case 3:
- 		   //abc="R.drawable.kuji3";
- 		   imageView1.setImageResource(R.drawable.kuji2);
+ 		   kj = R.drawable.kuji3;
  		   break;
  	   case 4:
- 		   //abc="R.drawable.kuji3";
- 		   imageView1.setImageResource(R.drawable.kuji2);
+ 		   kj = R.drawable.kuji3;
  		   break;
- 	  case 5:
+ 	  /*case 5:
 		   //abc="R.drawable.kuji3";
-		   imageView1.setImageResource(R.drawable.kuji3);
-		   break;
- 	 case 6:
-		   //abc="R.drawable.kuji3";
-		   imageView1.setImageResource(R.drawable.kuji3);
-		   break;
- 	 case 7:
-		   //abc="R.drawable.kuji3";
-		   imageView1.setImageResource(R.drawable.kuji3);
-		   break;
- 	 case 8:
-		   //abc="R.drawable.kuji3";
-		   imageView1.setImageResource(R.drawable.kuji3);
-		   break;
- 	 case 9:
-		   //abc="R.drawable.kuji3";
-		   imageView1.setImageResource(R.drawable.kuji4);
-		   break;
- 	   }    	
+		   //imageView1.setImageResource(R.drawable.kuji3);
+		   kj = R.drawable.kuji4;
+		   break;*/
+		   }
+		   imageView1.setImageResource(kj);
+    }
  	   
 		//imageView1.setImageResource(abc);  //abc = R.drawable.kuji1
-    }
     
 }
