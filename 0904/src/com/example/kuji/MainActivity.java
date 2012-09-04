@@ -13,28 +13,28 @@ public class MainActivity extends Activity {
     Button button;
     TextView tv;
  
-    public void kujiButton(View Button){          //‚­‚¶ƒ{ƒ^ƒ“‚Ìƒƒ\ƒbƒh
+    public void kujiButton(View Button){          //ãã˜ãƒœã‚¿ãƒ³ã®ãƒ¡ã‚½ãƒƒãƒ‰
         Random ran = new Random();
  
         String text = "test";
         switch((int)ran.nextInt() % 5){
         case 1:
-        	text = "w‘å ‹gx@™—Ç‚¢‚P“ú‚ğ™";
+        	text = "ã€å¤§ å‰ã€ã€€â˜†è‰¯ã„ï¼‘æ—¥ã‚’â˜†";
         	break;
         case 2:
-        	text = "w’† ‹gx@ƒ}ƒCƒy[ƒX‚É‚¢‚±‚¤I";
+        	text = "ã€ä¸­ å‰ã€ã€€ãƒã‚¤ãƒšãƒ¼ã‚¹ã«ã„ã“ã†ï¼";
         	break;
         case 3:
-        	text ="w¬@‹gx@‚¢‚Â‚à’Ê‚è‚Ì‚P“ú‚ğ";
+        	text ="ã€å°ã€€å‰ã€ã€€ã„ã¤ã‚‚é€šã‚Šã®ï¼‘æ—¥ã‚’";
         	break;
         case 4:
-        	text ="w‘å@‹¥x@`–ŒÌ‚É‹C‚ğ‚Â‚¯‚Ä`";
+        	text ="ã€å¤§ã€€å‡¶ã€ã€€ã€œäº‹æ•…ã«æ°—ã‚’ã¤ã‘ã¦ã€œ";
         	break;
         case 5:
-            text ="w ‹g x@‚¿‚å‚Á‚Æ—Ç‚¢–‚ ‚é‚©‚à";
+            text ="ã€ å‰ ã€ã€€ã¡ã‚‡ã£ã¨è‰¯ã„äº‹ã‚ã‚‹ã‹ã‚‚";
             break;
         default :
-        	text = "w ‹¥ x@–¾“ú‚Í¡“ú‚æ‚è—Ç‚¢‚Í‚¸I";
+        	text = "ã€ å‡¶ ã€ã€€æ˜æ—¥ã¯ä»Šæ—¥ã‚ˆã‚Šè‰¯ã„ã¯ãšï¼";
         	break;
         }
         tv.setText(text);
