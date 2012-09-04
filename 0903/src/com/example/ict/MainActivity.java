@@ -26,26 +26,26 @@ class MainActivity extends Activity {
     	ImageView imageView1 = (ImageView)findViewById(R.id.imageView4);
     	    	
     	int kj = 0;    	
-    	Random rnd = new Random();
+    	//Random rnd = new Random();
     	
-    	//switch((int)Math.random() % 5)
-    	switch((int)rnd.nextInt(5)) {
- 	   case 0:
+    	switch((int)Math.random() % 5){
+    	//switch((int)rnd.nextInt(5)) {
+ 	   case 1:
  		   kj = R.drawable.kuji1;
 		   break;
- 	   case 1:
- 		   kj = R.drawable.kuji2;
- 		   break;
  	   case 2:
  		   kj = R.drawable.kuji2;
  		   break;
  	   case 3:
- 		   kj = R.drawable.kuji3;
+ 		   kj = R.drawable.kuji2;
  		   break;
  	   case 4:
  		   kj = R.drawable.kuji3;
  		   break;
- 	  /*case 5:
+ 	   case 5:
+ 		   kj = R.drawable.kuji3;
+ 		   break;
+ 	  /*case 6:
 		   //abc="R.drawable.kuji3";
 		   //imageView1.setImageResource(R.drawable.kuji3);
 		   kj = R.drawable.kuji4;
