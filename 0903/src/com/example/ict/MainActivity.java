@@ -46,7 +46,10 @@ class MainActivity extends Activity {
  	   case 5:
  		   kj = R.drawable.kuji3;
  		   break;
- 	  /*case 6:
+	   default:
+		   kj = R.drawable.kuji4;
+		   break;
+		   /*case 6:
 		   //abc="R.drawable.kuji3";
 		   //imageView1.setImageResource(R.drawable.kuji3);
 		   kj = R.drawable.kuji4;

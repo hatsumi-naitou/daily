@@ -10,35 +10,34 @@ import java.util.Random;
 import java.lang.String;
  
 public class MainActivity extends Activity {
-    Button myButton;
-    TextView myTextView;
+    Button button;
+    TextView tv;
  
-    //methods
-    public void changeText(View theButton){
-        Random rand = new Random();
+    public void kujiButton(View Button){          //くじボタンのメソッド
+        Random ran = new Random();
  
         String text = "test";
-        switch((int)rand.nextInt() % 5){
+        switch((int)ran.nextInt() % 5){
         case 1:
-        	text = "大　吉";
+        	text = "『大 吉』　☆良い１日を☆";
         	break;
         case 2:
-        	text = "中　吉";
+        	text = "『中 吉』　マイペースにいこう！";
         	break;
         case 3:
-        	text ="小　吉";
+        	text ="『小　吉』　いつも通りの１日を";
         	break;
         case 4:
-        	text ="大　凶";
+        	text ="『大　凶』　～事故に気をつけて～";
         	break;
         case 5:
-            text ="　吉　";
+            text ="『 吉 』　ちょっと良い事あるかも";
             break;
         default :
-        	text = "　凶　";
+        	text = "『 凶 』　明日は今日より良いはず！";
         	break;
         }
-        myTextView.setText(text);
+        tv.setText(text);
     }
  
     @Override
@@ -46,14 +45,14 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
  
-        myButton = (Button)findViewById(R.id.button1);
-        myTextView = (TextView)findViewById(R.id.textView1);
-       // myButton.setOnClickListener(this);
+        button = (Button)findViewById(R.id.button1);
+        tv = (TextView)findViewById(R.id.textView1);
+
     }
  
-    public void onClick(View view){
-        //changeText();
-    }
+  /*  public void onClick(View view){
+   * }
+   * */
  
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
