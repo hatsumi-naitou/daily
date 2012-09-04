@@ -25,11 +25,12 @@ class MainActivity extends Activity {
     public void showKuji(View view){
     	ImageView imageView1 = (ImageView)findViewById(R.id.imageView4);
     	    	
-    	int kj = 0;    	
-    	//Random rnd = new Random();
+    	int kj = 0;    	//kj = R.drawable.kuji1
+    	Random rnd = new Random();
     	
-    	switch((int)Math.random() % 5){
+    	//switch((int)Math.random() % 5){
     	//switch((int)rnd.nextInt(5)) {
+    	switch((int)rnd.nextInt() % 5){
  	   case 1:
  		   kj = R.drawable.kuji1;
 		   break;
@@ -54,6 +55,6 @@ class MainActivity extends Activity {
 		   imageView1.setImageResource(kj);
     }
  	   
-		//imageView1.setImageResource(abc);  //abc = R.drawable.kuji1
+		//imageView1.setImageResource(kj);  //kj = R.drawable.kuji1
     
 }
