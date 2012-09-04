@@ -20,23 +20,23 @@ public class MainActivity extends Activity {
         String text = "test";
         switch((int)rand.nextInt() % 5){
         case 1:
-        text = "‘å‹g";
-        break;
+        	text = "‘å@‹g";
+        	break;
         case 2:
-        text = "’†‹g";
-        break;
+        	text = "’†@‹g";
+        	break;
         case 3:
-        text ="¬‹g";
-        break;
+        	text ="¬@‹g";
+        	break;
         case 4:
-            text ="‘å‹¥";
-            break;
+        	text ="‘å@‹¥";
+        	break;
         case 5:
-            text ="G‹g";
+            text ="@‹g@";
             break;
         default :
-        text = "‹¥";
-        break;
+        	text = "@‹¥@";
+        	break;
         }
         myTextView.setText(text);
     }
