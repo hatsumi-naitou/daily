@@ -14,32 +14,31 @@ public class MainActivity extends Activity {
 	
     
     public void showKuji(View view){
-    	Random rnd = new Random();
-    	    	    	
+    	//Random rnd = new Random();
     	int kj = 0;    	//kj = R.drawable.kuji1
     	
-    	//switch((int)Math.random() % 5){
-    	//switch((int)rnd.nextInt(5)) {
+    	//switch((int)rnd.nextInt() % 5){
     	
-    	switch((int)rnd.nextInt() % 5){
- 	   case 1:
- 		   kj = R.drawable.kuji1;
-		   break;
- 	   case 2:
- 		   kj = R.drawable.kuji1;
- 		   break;
- 	   case 3:
- 		   kj = R.drawable.kuji4;
- 		   break;
- 	   case 4:
- 		   kj = R.drawable.kuji3;
- 		   break;
- 	   case 5:
- 		   kj = R.drawable.kuji3;
- 		   break;
-	   default:
-		   kj = R.drawable.kuji2;
-		   break;
+    	int rad = (int)(Math.random() * 10);
+    	switch(rad){
+	 	   case 1:
+	 		   kj = R.drawable.kuji1;
+			   break;
+	 	   case 2:
+	 		   kj = R.drawable.kuji1;
+	 		   break;
+	 	   case 3:
+	 		   kj = R.drawable.kuji2;
+	 		   break;
+	 	   case 4:
+	 		   kj = R.drawable.kuji2;
+	 		   break;
+	 	   case 5:
+	 		   kj = R.drawable.kuji4;
+	 		   break;
+		   default:
+			   kj = R.drawable.kuji3;
+			   break;
 		   
 		   /*case 6:
 		   //abc="R.drawable.kuji3";
