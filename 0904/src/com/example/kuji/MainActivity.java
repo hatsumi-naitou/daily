@@ -19,22 +19,22 @@ public class MainActivity extends Activity {
         String text = "test";
         switch((int)ran.nextInt() % 5){
         case 1:
-        	text = "『大 吉』　☆良い１日を☆";
+        	text = "大吉";
         	break;
         case 2:
-        	text = "『中 吉』　マイペースにいこう！";
+        	text = "中吉";
         	break;
         case 3:
-        	text ="『小　吉』　いつも通りの１日を";
+        	text ="小吉";
         	break;
         case 4:
-        	text ="『大　凶』　〜事故に気をつけて〜";
+        	text ="大凶";
         	break;
         case 5:
-            text ="『 吉 』　ちょっと良い事あるかも";
+            text ="吉";
             break;
         default :
-        	text = "『 凶 』　明日は今日より良いはず！";
+        	text = "凶";
         	break;
         }
         tv.setText(text);
