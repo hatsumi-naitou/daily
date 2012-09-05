@@ -1,6 +1,6 @@
 package com.example.ict;
 
-import java.util.Random;
+//import java.util.Random;
 
 import com.example.ict.R;
 import android.app.Activity;
