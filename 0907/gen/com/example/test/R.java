@@ -18,30 +18,40 @@ public final class R {
     public static final class drawable {
         public static final int ic_action_search=0x7f020000;
         public static final int ic_launcher=0x7f020001;
+        public static final int map=0x7f020002;
     }
     public static final class id {
-        public static final int addressLabel=0x7f08000c;
-        public static final int addressText=0x7f080005;
-        public static final int companyNameLabel=0x7f080008;
-        public static final int companyNameText=0x7f080002;
+        public static final int addressLabel=0x7f080014;
+        public static final int addressText=0x7f08000b;
+        public static final int companyNameLabel=0x7f080010;
+        public static final int companyNameText=0x7f080007;
+        public static final int currentLocationToggle=0x7f080005;
         public static final int list=0x7f080000;
-        public static final int mailLabel=0x7f08000f;
-        public static final int mailText=0x7f080007;
-        public static final int menu_settings=0x7f080010;
-        public static final int organizationNameLabel=0x7f080009;
-        public static final int personNameLabel=0x7f08000b;
-        public static final int personNameText=0x7f080001;
-        public static final int positionNameLabel=0x7f08000a;
-        public static final int positionNameText=0x7f080003;
-        public static final int tel1Label=0x7f08000d;
-        public static final int tel1Text=0x7f080006;
-        public static final int tel2Label=0x7f08000e;
-        public static final int zip_codeText=0x7f080004;
+        public static final int mailLabel=0x7f080017;
+        public static final int mailText=0x7f08000f;
+        public static final int map=0x7f080001;
+        public static final int mapButton=0x7f08000c;
+        public static final int mapRadioGroup=0x7f080002;
+        public static final int menu_settings=0x7f080018;
+        public static final int normalMapRadio=0x7f080003;
+        public static final int organizationNameLabel=0x7f080011;
+        public static final int organizationNameText=0x7f080008;
+        public static final int personNameLabel=0x7f080013;
+        public static final int personNameText=0x7f080006;
+        public static final int positionNameLabel=0x7f080012;
+        public static final int positionNameText=0x7f080009;
+        public static final int satelliteMapRadio=0x7f080004;
+        public static final int tel1Label=0x7f080015;
+        public static final int tel1Text=0x7f08000d;
+        public static final int tel2Label=0x7f080016;
+        public static final int tel2Text=0x7f08000e;
+        public static final int zipCodeText=0x7f08000a;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int regist=0x7f030001;
-        public static final int show=0x7f030002;
+        public static final int map=0x7f030001;
+        public static final int regist=0x7f030002;
+        public static final int show=0x7f030003;
     }
     public static final class menu {
         public static final int activity_main=0x7f070000;
