@@ -23,63 +23,63 @@ import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 
 public class windbell extends Activity {
-	private MediaPlayer mPlayer;		// 再生するプレーヤー
-	private MediaPlayer mp_1;			//大きな音
-	private MediaPlayer mp_2;			//少し大きい音
-	private MediaPlayer mp_3;			//中間の音
-	private MediaPlayer mp_4;			//少し小さい音
-	private MediaPlayer mp_5;			//小さい音
-	private ShakeListener mShakeListener; 			// センサーマネージャ
-	private TimerTask mTimerTask;					// Timerタスク
-	private Timer mTimer;							// タイマー
-	private Handler mHandler			= new Handler();
-	private int[] intMove01Array		= {2, 1, 1, 1, 0};	//画像のふり幅（風鈴本体）
-	private int[] intMove02Array		= {5, 4, 3, 2, 1};	//画像のふり幅（短冊）
-	private int intDuration				= 2500;				//回転スピードの指定
-	private int intDurationCount		= 3;				//回転回数の指定
-	private int intStarImage01Width		= 0;				//画像01の左位置（横）
-	private int intEndImage01Width		= 0;				//画像01の右位置（横）
-	private int intStarImage01Height	= 0;				//画像01の上位置（縦）
-	private int intEndImage01Height		= 0;				//画像01の下位置（縦）
-	private int intStarImage02Width		= 0;				//画像02の左位置（横）
-	private int intEndImage02Width		= 0;				//画像02の右位置（横）
-	private int intStarImage02Height	= 0;				//画像02の上位置（縦）
-	private int intEndImage02Height		= 0;				//画像02の下位置（縦）
-	private int intShakeType			= 0;				//シェイク動作のタイプ（0:弱い、1:中、2：強･･･）
-	private int intShakeTypeCount		= 0;				//シェイク動作のタイプの各値をセット
-	private float[] nShakeOverListArray	= {30, 50, 80};		//シェイク動作の上限値リスト
-	private float nShakeSpeed			= 0;				//加速度の値
+	private MediaPlayer mPlayer;
+	private MediaPlayer mp_1;
+	private MediaPlayer mp_2;
+	private MediaPlayer mp_3;
+	private MediaPlayer mp_4;
+	private MediaPlayer mp_5;
+	private ShakeListener mShakeListener;
+	private TimerTask mTimerTask;
+	private Timer mTimer;
+	private Handler mHandler = new Handler();
+	private int[] intMove01Array = {2, 1, 1, 1, 0};
+	private int[] intMove02Array = {5, 4, 3, 2, 1};
+	private int intDuration = 2500;	
+	private int intDurationCount = 3;
+	private int intStarImage01Width = 0;
+	private int intEndImage01Width = 0;
+	private int intStarImage01Height = 0;
+	private int intEndImage01Height = 0;
+	private int intStarImage02Width = 0;
+	private int intEndImage02Width = 0;
+	private int intStarImage02Height = 0;
+	private int intEndImage02Height = 0;
+	private int intShakeType = 0;
+	private int intShakeTypeCount = 0;
+	private float[] nShakeOverListArray	= {30, 50, 80};
+	private float nShakeSpeed = 0;
 
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		requestWindowFeature(Window.FEATURE_NO_TITLE);		//タイトルバー非表示（※setContentViewの前で宣言）
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(jp.androck.windbell.R.layout.main);
 //		AndrockCover.start(this);
 
 
-		mShakeListener		= new ShakeListener(this);						//シェイクのクラス
-		mp_1	= MediaPlayer.create(this, R.raw.furin001);					//メディアプレイヤー(最大の音)
-		mp_2	= MediaPlayer.create(this, R.raw.furin002);					//メディアプレイヤー(少し大きい音)
-		mp_3	= MediaPlayer.create(this, R.raw.furin003);					//メディアプレイヤー(中の音)
-		mp_4	= MediaPlayer.create(this, R.raw.furin004);					//メディアプレイヤー(少し小さい音)
-		mp_5	= MediaPlayer.create(this, R.raw.furin005);					//メディアプレイヤー(最小の音)
-		mPlayer				= mp_1;
+		mShakeListener = new ShakeListener(this);
+		mp_1 = MediaPlayer.create(this, R.raw.furin001);	
+		mp_2 = MediaPlayer.create(this, R.raw.furin002);	
+		mp_3 = MediaPlayer.create(this, R.raw.furin003);
+		mp_4 = MediaPlayer.create(this, R.raw.furin004);
+		mp_5 = MediaPlayer.create(this, R.raw.furin005);
+		mPlayer = mp_1;
 
 		//シェイク動作
 		mShakeListener.setOnShakeListener(new OnShakeListener() {
 			// シェイクを検知した場合
 			public void onShake() {
 				if(nShakeOverListArray[0] > nShakeSpeed){
-					intShakeType	= 3;
+					intShakeType = 3;
 				} else if(nShakeOverListArray[1] > nShakeSpeed) {
-					intShakeType	= 2;
+					intShakeType = 2;
 				} else if(nShakeOverListArray[2] > nShakeSpeed) {
-					intShakeType	= 1;
+					intShakeType = 1;
 				} else {
-					intShakeType	= 0;
+					intShakeType = 0;
 				}
 				TimerAction();	//処理実行
 			}
@@ -116,8 +116,8 @@ public class windbell extends Activity {
 			WindowManager wm	= (WindowManager) getSystemService(Context.WINDOW_SERVICE);
 			Display display		= wm.getDefaultDisplay();											//ディスプレイのサイズ取得で使用
 
-			intStarImage01Width		= (display.getWidth() - bitmap01.getWidth()) / 2;	//画像01の左位置（横）
-			intEndImage01Width		= (display.getWidth() + bitmap01.getWidth()) / 2;	//画像01の右位置（横）
+			intStarImage01Width		= (display.getWidth() - bitmap01.getWidth()) / 2;
+			intEndImage01Width		= (display.getWidth() + bitmap01.getWidth()) / 2;
 			intStarImage01Height	= statusBarHeight+1;								//画像01の上位置（縦）
 			intEndImage01Height		= intStarImage01Height + bitmap01.getHeight();		//画像01の下位置（縦）
 			intStarImage02Width		= (display.getWidth() - bitmap02.getWidth()) / 2;	//画像02の左位置（横）
